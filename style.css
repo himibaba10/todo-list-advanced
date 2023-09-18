@@ -1,0 +1,160 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(45deg, #0b69a7, #2980b9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.to-do-list {
+  background: white;
+  max-width: 450px;
+  padding: 30px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container svg {
+  position: absolute;
+  top: 0.7rem;
+  left: 0.5rem;
+}
+
+.input-container input {
+  padding: 12px 0 12px 40px;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+.input-container input:focus {
+  outline: 2px solid gray;
+}
+
+.status-container {
+  margin: 15px 0 5px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.status-container > * {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#status-clear {
+  margin-left: auto;
+  color: white;
+  background: #0b69a7;
+  padding: 12px 20px;
+  border-radius: 4px;
+  border: none;
+}
+
+.status-container .active {
+  color: #0b69a7;
+  font-weight: 700;
+}
+
+.task-container {
+  font-size: 17px;
+  margin-top: 13px;
+  list-style: none;
+}
+
+.task-container .active {
+  display: block;
+}
+
+.task-container label {
+  display: block;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.task-container label span.checked {
+  color: gray;
+  text-decoration: line-through;
+}
+
+.task-container li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-setting-container {
+  position: relative;
+  margin-top: -25px;
+}
+
+.task-setting-container > span {
+  font-size: 28px;
+}
+
+.task-setting-container span {
+  cursor: pointer;
+}
+
+.task-setting {
+  display: none;
+  position: absolute;
+  border: 1px solid lightgrey;
+  padding: 10px;
+  top: 30px;
+  right: 0;
+  border-radius: 6px;
+  background: white;
+  z-index: 1;
+}
+
+.task-setting-container:hover .task-setting {
+  display: block;
+}
+
+.pending {
+  color: black;
+  text-decoration: none;
+}
+
+.completed {
+  color: gray;
+  text-decoration: line-through;
+}
+
+@media (max-width: 767px) {
+  .container,
+  .to-do-list {
+    padding: 10px;
+  }
+
+  .status-container {
+    gap: 10px;
+  }
+
+  .status-container > * {
+    font-size: 13px;
+  }
+
+  #status-clear {
+    padding: 10px 15px;
+  }
+}

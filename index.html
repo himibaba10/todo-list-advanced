@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>To-do List</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="to-do-list">
+        <div class="input-container">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="black"
+            style="width: 24px; height: 24px"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12"
+            />
+          </svg>
+
+          <input type="text" placeholder="Write a task" />
+        </div>
+        <div class="status-container">
+          <span id="status-all" class="active">All</span>
+          <span id="status-pending">Pending</span>
+          <span id="status-completed">Completed</span>
+          <button id="status-clear">Clear All</button>
+        </div>
+        <hr />
+        <ul class="task-container"></ul>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
